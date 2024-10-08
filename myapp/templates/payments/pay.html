@@ -1,0 +1,12 @@
+<!-- payments/pay.html -->
+<form method="POST" action="">
+    {% csrf_token %}
+    <label for="amount">Amount:</label>
+    <input type="text" name="amount" id="amount" required />
+    <button type="submit">Pay Now</button>
+    
+    <!-- Display error if exists -->
+    {% if error %}
+      <p style="color:red;">{{ error }}</p>
+    {% endif %}
+  </form>

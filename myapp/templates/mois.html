@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+ <br><br>
+ <center>
+  <div class="container d-flex flex row" style="justify-content: space-around;">
+    <div class="card col-md-3" style="width:300px ;height: 500px; border: none;background-color: pink;">
+      <img src="{% static 'images/mois1.jpeg' %}" alt="" class="card-img-top" style="width: 275px; height: 300px;">
+      <h5 class="card-title">Sprinkle Water Boast Hydrating Get Creme 100 HR</h5>
+      <p class="card-text">price:$799</p>
+      <p class="card-text">Offer:20%</p>
+      <a href="{% url "initiate_payment" %}" style="text-align: center;"><button class="btn  " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+    </div>
+    <div class="card col-md-3" style="width:300px ;height: 500px; border: none;background-color: pink;">
+        <img src="{% static 'images/mois2.jpeg' %}" alt="" class="card-img-top" style="width: 275px; height: 300px;">
+        <h5 class="card-title"> Sprinkle Hyper Real Skincares Balm Moisturizer</h5>
+        <p class="card-text">price:$632</p>
+        <p class="card-text">Offer:20%</p>
+        <a href="{% url "initiate_payment" %}" style="text-align: center;"><button class="btn  " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+      </div>
+      <div class="card col-md-3" style="width:300px ;height: 500px; border: none;background-color: pink;">
+        <img src="{% static 'images/l5.jpeg' %}" alt="" class="card-img-top" style="width: 275px; height: 300px;">
+        <h5 class="card-title">Sprinkle Moisturizer Alove Vera Face Gel</h5>
+        <p class="card-text">price:$599</p>
+        <p class="card-text">Offer:20%</p>
+        <a href="{% url "initiate_payment" %}" style="text-align: center;"><button class="btn  " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+      </div>
+
+
+    </div><br><br>
+    <div class="container d-flex row" style="justify-content: space-around;">
+
+      <div class="card col-md-3" style="width:300px ;height: 500px; border: none;background-color: pink;">
+        <img src="{% static 'images/mois4.jpeg' %}" alt="" class="card-img-top" style="width: 275px; height: 300px;">
+        <h5 class="card-title">Sprinkle Naturals Skin Potion 24k Boosting Face</h5>
+        <p class="card-text">price:$756</p>
+        <p class="card-text">Offer:20%</p>
+        <a href="{% url "initiate_payment" %}" style="text-align: center;"><button class="btn  " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+      </div>
+      <div class="card col-md-3" style="width:300px ;height: 500px; border: none;background-color: pink;">
+        <img src="{% static 'images/mois5.jpeg' %}" alt="" class="card-img-top" style="width: 275px; height: 300px;">
+        <h5 class="card-title">Sprinkle Belif the True Creaam Aqua Bomb </h5>
+        <p class="card-text">price:$888</p>
+        <p class="card-text">Offer:20%</p>
+        <a href="{% url "initiate_payment" %}" style="text-align: center;"><button class="btn  " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+      </div>
+      <div class="card col-md-3" style="width:300px ;height: 500px; border: none;background-color: pink;">
+        <img src="{% static 'images/mois6.jpeg' %}" alt="" class="card-img-top" style="width: 275px; height: 300px;">
+        <h5 class="card-title">Sprinkle Vitamin C Face Moisturizer for Radiant Skin</h5>
+        <p class="card-text">price:$322</p>
+        <p class="card-text">Offer:20%</p>
+        <a href="{% url "initiate_payment" %}" style="text-align: center;"><button class="btn  " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+      </div>
+
+</div>
+</center>
+<br><br>
+<div   class="parent row" style="padding-left: 50px; width: 100%;" id="contact">
+  <div class="child1 col-md-3"  >
+      <h2>BeautySprinkle</h2><br><br>
+      <p>123 Consectetur at 10660</p>
+      <p><i class="fa-solid fa-phone-volume"></i>9876543210</p>
+      <p><i class="fa-solid fa-envelope"></i>BeautySprinkle.com</p>
+  </div>
+
+  <div class="child2 col-md-3" style="display: flex-wrap;" >
+      <h2>Product</h2><br><br>
+      <a href="{% url 'lipstick' %}" style="color: white; text-decoration: none;"><p>LipStick</p></a>
+      <a href="{% url 'mascara' %}" style="color: white; text-decoration: none;"><p>Mascarar</p></a>
+      <a href="{% url 'eye' %}" style="color: white; text-decoration: none;"><p>Eyeliner</p></a>
+      <a href="{% url 'mois' %}" style="color: white; text-decoration: none;"><p>Moisturisers</p></a>
+      <a href="{% url 'serum' %}"style="color: white; text-decoration: none;"><p>Serum</p>
+      </a>
+  </div>
+  <div class="child3 col-md-3" >
+      <h2>Further Info</h2><br><br>
+      <p>Home</p>
+      <p>About us </p>
+      <p>Shop Locations</p>
+      <p>Contact</p>
+  </div>    
+  <div class="ch col-md-3" style="padding-left: 40px;padding-top: 30px;" ><br><br>
+    <h2>Social Media</h2>
+      <i class="fa-brands fa-facebook"  style="padding-left: 30px;"></i> <i  style="padding-left: 30px;"
+         class="fa-brands fa-square-instagram"></i> <i  style="padding-left: 30px;" class="fa-brands fa-twitter"></i> 
+
+  </div>
+
+</div>
+{% endblock %}

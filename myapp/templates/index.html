@@ -1,0 +1,409 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div id="home">
+  <div id="carouselExampleIndicators" class="carousel slide ">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" ></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static './images/1.png' %}" class="d-block w-100" alt="" style="height: 600px;">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static './images/2.png' %}" class="d-block w-100" alt="" style="height: 600px;">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static './images/4.png' %}" class="d-block w-100" alt="" style="height: 600px;">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static './images/3.png' %}" class="d-block w-100" alt="" style="height: 600px;">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<br><br><br>
+<h2 style="text-align: center; color: deeppink;" id="top">TOP SALES</h2><br><br>
+<div class="c1  row" style="justify-content: space-around; padding: 60px;" class="one" >
+  <div class="card col-md-4  p-6 " style="width: 200px; height: 200px; border: none;  ">
+    <a href="{% url "lipstick" %}"><img src="{% static './images/l1.jpeg' %}" alt="" class="rounded-circle img-fluid" style="height: 200px; width: 200px;"></a>
+  </div>
+<br>
+  <div class="card col-md-4 " style="width: 200px; height: 200px; border: none;display: inline-block; ">
+    <a href="{% url "serum" %}">    <img src="{% static './images/ser1.jpeg' %}" alt="" class="card-image-top img-fluid" style="height: 200px; width: 200px;">
+    </a>
+  </div> 
+
+  <div class="card col-md-4 " style="width: 200px; height: 200px; border: none; display: inline-block; ">
+    <a href="{% url 'eye' %}"><img src="{% static './images/eye1.jpeg' %}" alt="" class="rounded-circle img-fluid" style="height: 200px; width: 200px;">
+    </a>  
+  </div>
+
+  <div class="card col-md-4 " style="width: 200px; height: 200px; border: none;display: inline-block;">
+    <a href="{% url "mascara" %}"><img src="{% static './images/l4.jpeg' %}" alt="" class="rounded-circle img-fluid" style="height: 200px; width: 200px;">
+    </a>
+  </div>
+
+  <div class="card col-md-4   " style="width: 200px; height: 200px; border: none;display: inline-block;">
+    <a href="{% url "mois" %}"><img src="{% static './images/mois4.jpeg' %}" alt="" class="rounded-circle img-fluid" style="height: 200px; width: 200px;">
+    </a>
+  </div>
+</div>
+<br><br><br>
+<h3 style="color: deeppink; text-align: center;" id="product">BEST LIPSTICK FOR WOMEN</h3><br><br>
+<div class="c2 d-flex row" style="justify-content: space-between;">
+<div class="card col-md-3  " style="width: 330px; height: 500px; background-color: pink; border-color: deeppink;">
+  <a href="{% url "lipstick" %}"><img src="{% static './images/f1.jpeg' %}" id="im1" alt="No image" class="card-image-top hover-image " style="height: 300px; width: 317px; " data-hover="{%static './images/ff1.jpeg'%} " data-default="{%static './images/f1.jpeg'%}">
+  </a>
+  <div class="card-body">
+  <h5 class="card-title" >BeautySprinkle Revolution Makeup</h5>
+  <p class="card-text">Price: $600</p>
+  <p class="card-text">Off 20%</p>
+  <a href="{% url "initiate_payment" %}"><button class="btn" style="background-color: deeppink; color: white; ">Buy Now</button></a>
+</div></div>
+
+<div class="card col-md-3 " style="width: 330px; height: 500px; background-color: pink; border: 1px solid deeppink; ">
+  <a href="{% url "lipstick" %}">  <img src="{% static './images/f2.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/ff4.jpeg'%} " data-default="{%static './images/f6.jpeg'%}">
+  </a>
+  <div class="card-body">
+  <h5  class="card-title" > BeautySprinkle Bright Red</h5>
+  <p class="card-text">Price: $200</p>
+  <p class="card-text">Off 20%</p>
+  <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+</div></div>
+
+<div class="card col-md-3 " style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink; ">
+  <a href="{% url "lipstick" %}">  <img src="{% static './images/f4.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;"data-hover="{%static './images/ff3.jpeg'%} " data-default="{%static './images/f4.jpeg'%}">
+  </a>
+  <div class="card-body">
+  <h5 class="card-title" >  BeautySprinkle Drak Brown Shad </h5>
+  <p class="card-text">Price: $690</p>
+  <p class="card-text">Off 20%</p>
+  <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+</div></div>
+
+<div class="card col-md-3 " style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+  <a href="{% url "lipstick" %}">
+      <img src="{% static './images/f5.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/ff2.jpeg'%} " data-default="{%static './images/f5.jpeg'%}">
+  </a>
+  <div class="card-body">
+  <h5 class="card-title" >BeautySprinkle melting lipcream</h5>
+  <p class="card-text">Price: $490</p>
+  <p class="card-text">Off 20%</p>
+  <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+</div></div>
+
+</div> 
+
+
+
+<br><br><br><br>
+<h2 style="color: deeppink; text-align: center;">THE SCIENCE BEHIND BEAUTY SPRINKLE SKIN</h2><br><br>
+<div id="lightSlider">
+<div class="card  " style="width: 300px; height: 300px;border: none; ">
+  <img src="{% static 'images/ser3.jpeg' %}" alt="" style="width: 400px;height: 250px;" class="img-fluid"> <br>
+  <h6 class="card-text text-center">Serum</h6>
+</div>
+  <div class="card " style="width: 300px; height: 300px;border: none;">
+<img src="{% static 'images/found6.jpeg' %}" alt="" style="width: 400px;height: 250px;" class="img-fluid"> <br>
+<h6 class="card-text text-center">Foundation</h6>
+</div>
+<div class="card " style="width: 300px; height: 300px;border: none;">
+<img src="{% static 'images/eye7.webp' %}" alt="" style="width: 400px;height: 250px;" class="img-fluid"><br>
+<h6 class="card-text text-center">Eyeliner</h6>
+</div>
+<div class="card " style="width: 300px; height: 300px;border: none;">
+<img src="{% static 'images/mois1.jpeg' %}" alt="" style="width: 400px;height: 250px;" class="img-fluid">  <br>
+<h6 class="card-text text-center">Moisturisers</h6>
+</div>
+</div> 
+<br><br><br>
+
+<h2 style="color: deeppink; text-align: center;">BEST EYELINER</h2><br><br>
+<div class="c4 d-flex row" style="justify-content: space-between;">
+  <div class="card col-md-3  " style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "eye" %}"><img src="{% static './images/eye1.jpeg' %}" id="im1" alt="No image" class="card-image-top hover-image " style="height: 300px; width: 300px; " data-hover="{%static './images/e1.png'%} " data-default="{%static './images/eye1.jpeg'%}">
+    </a>
+    <h5 class="card-title" >Sprinkle Midnight Kohi Pencil 1.5Gm</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $299</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3 " style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "eye" %}">  <img src="{% static './images/eye2.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/e2.jpeg'%} " data-default="{%static './images/eye2.jpeg'%}">
+    </a>
+    <h5  class="card-title" >Sprinkle Superdense Eyebrow</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $399</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3 " style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "eye" %}">  <img src="{% static './images/eye6.png' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/e3.jpeg'%} " data-default="{%static './images/eye3.jpeg'%}">
+    </a>
+    <h5  class="card-title" >Sprinkle Browfill Eyeliner Stick</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $499</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3 " style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "eye" %}">  <img src="{% static './images/eye4.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/e4.jpeg'%} " data-default="{%static './images/eye4.jpeg'%}">
+    </a>
+    <h5  class="card-title" >Bold4 4-In-1 Eyeliner</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $800</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+</div>
+<br><br><br>
+<h2 style="color: deeppink; text-align: center;">BRIGHTER AND FIRMER LOOKING SKIN</h2><br><br>
+ <div class="c5 d-flex row" style="justify-content: space-between;">
+  <div class="card col-md-3  " style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "mois" %}"><img src="{% static './images/mois1.jpeg' %}" id="im1" alt="No image" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/mo1.jpeg'%} " data-default="{%static './images/mois1.jpeg'%}">
+    </a>
+    <h5 class="card-title" >Sprinkle Water Boast Hydrating Get Creme 100 HR</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $786</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3 " style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "mois" %}">  <img src="{% static './images/mois2.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/mo4.jpeg'%} " data-default="{%static './images/mois2.jpeg'%}">
+    </a>
+    <h5  class="card-title" > Sprinkle Hyper Real Skincares Balm Moisturizer</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $862</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3 " style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "mois" %}">  <img src="{% static './images/mois6.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/mo3.jpeg'%} " data-default="{%static './images/mois6.jpeg'%}">
+    </a>
+    <h5  class="card-title" >Sprinkle Moisturizer Alove Vera Face Gel</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $456</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3 " style="width: 330px; height: 500px; background-color: pink; border-color: deeppink;">
+    <a href="{% url "mois" %}">  <img src="{% static './images/mois4.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/mo2.jpeg'%} " data-default="{%static './images/mois4.jpeg'%}">
+    </a>
+    <h5  class="card-title" >Sprinkle Naturals Skin Potion 24k Boosting Face</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $963</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div> </div>
+</div>
+<br><br><br>
+
+<h2 style="text-align: center; color: deeppink;">GENTLE SOLUTIONS FOR ACNE AND WRINKLES</h2><br><br>
+<div id="carouselExampleIndicators2" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" ></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static './images/caro2.png' %}" class="d-block w-100" alt="..." style="height: 600px;">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/caro1.png' %}" class="d-block w-100" alt="..." style="height: 600px;">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/caro3.png' %}" class="d-block w-100" alt="..." style="height: 600px;">
+    </div>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br><br><br>
+<h2 style="color: deeppink; text-align: center;">BASIC SKIN CARE ROUTINE</h2><br><br>
+ <div class="c6 d-flex justify-content-sm-evenly row" style="justify-content: space-between;">
+  <div class="card col-md-3 " style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "serum" %}"><img src="{% static './images/ser1.jpeg' %}" id="" alt="No image" class="card-image-top  hover-image" style="height: 300px; width: 300px; " data-hover="{%static './images/ss1.webp'%} " data-default="{%static './images/ser1.jpeg'%}">
+    </a>
+    <h5 class="card-title" >Sprinkle Day & Night serum Combo</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $1425</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3" style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "serum" %}">  <img src="{% static './images/ser2.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/ss2.webp'%} " data-default="{%static './images/ser2.jpeg'%}">
+    </a>
+    <h5  class="card-title" >Sprinkle Vitamin C, Salicyclic & Niacinamide Serum</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $459</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3" style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "serum" %}">  <img src="{% static './images/ser3.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/ss4.webp'%} " data-default="{%static './images/ser3.jpeg'%}">
+    </a>
+    <h5  class="card-title" >Sprinkle Glow Boost & Shield Set</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $485</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3" style="width: 330px; height: 500px; background-color: pink; border-color: deeppink;">
+    <a href="{% url "serum" %}">  <img src="{% static './images/ser4.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/ss3.webp'%} " data-default="{%static './images/ser4.jpeg'%}">
+    </a>
+    <h5  class="card-title" > Sprinkle Rice Water & niacinamide Toner, 135</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $568</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div> </div>
+</div>
+
+<br><br><br>
+<h2 style="color: deeppink; text-align: center;">FRESHLY COMPOUNDED PRESCRIPTION</h2><br><br>
+<div class="c7 d-flex row" style="justify-content: space-between;">
+  <div class="card  col-md-3" style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "mascara" %}"><img src="{% static './images/mas1.jpeg' %}" id="" alt="No image" class="card-image-top hover-image " style="height: 300px; width: 300px; " data-hover="{%static './images/mm1.jpeg'%} " data-default="{%static './images/mas1.jpeg'%}">
+    </a>
+    <h5 class="card-title" >Sprinkle Stark Mascara Pen </h5> 
+    <div class="card-body">
+    <p class="card-text">Price: $150</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3" style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "mascara" %}">  <img src="{% static './images/mas2.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/mm2.jpeg'%} " data-default="{%static './images/mas2.jpeg'%}">
+    </a>
+    <h5  class="card-title" > Sprinkle Volumax Mascara, 10ml</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $359</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3" style="width: 330px; height: 500px; background-color: pink;  border-color: deeppink;">
+    <a href="{% url "mascara" %}">  <img src="{% static './images/mas3.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/mm3.jpeg'%} " data-default="{%static './images/mas3.jpeg'%}">
+    </a>
+    <h5  class="card-title" > Sprinkle Midnight Mascara</h5>
+    <div class="card-body">
+    <p class="card-text">Price: $699</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div></div>
+
+  <div class="card col-md-3" style="width: 330px; height: 500px; background-color: pink; border-color: deeppink;">
+    <a href="{% url "mascara" %}">  <img src="{% static './images/mas4.jpeg' %}" alt="" class="card-image-top hover-image" style="height: 300px; width: 300px;" data-hover="{%static './images/mm4.jpeg'%} " data-default="{%static './images/mas4.jpeg'%}">
+    </a>
+    <h5  class="card-title" > Sprinkle Full Volume 2-in-1 Mascara With Primer,10ml</h5>
+    <p class="card-text">Price: $567</p>
+    <p class="card-text">Off 20%</p>
+    <a href="{% url "initiate_payment" %}"><button class="btn " style="background-color: deeppink; color: white; ">Buy Now</button></a>
+  </div> 
+</div>
+</div>
+<br><br><br>
+
+
+
+
+ 
+  <div   class="parent row" style="padding-left: 50px; width: 100%;" id="contact">
+    <div class="child1 col-md-3"  >
+        <h2>BeautySprinkle</h2><br><br>
+        <p>123 Consectetur at 10660</p>
+        <p><i class="fa-solid fa-phone-volume"></i>9876543210</p>
+        <p><i class="fa-solid fa-envelope"></i>BeautySprinkle.com</p>
+    </div>
+
+    <div class="child2 col-md-3" style="display: flex-wrap;" >
+        <h2>Product</h2><br><br>
+        <a href="{% url 'lipstick' %}" style="color: white; text-decoration: none;"><p>LipStick</p></a>
+        <a href="{% url 'mascara' %}" style="color: white; text-decoration: none;"><p>Mascarar</p></a>
+        <a href="{% url 'eye' %}" style="color: white; text-decoration: none;"><p>Eyeliner</p></a>
+        <a href="{% url 'mois' %}" style="color: white; text-decoration: none;"><p>Moisturisers</p></a>
+        <a href="{% url 'serum' %}"style="color: white; text-decoration: none;"><p>Serum</p>
+        </a>
+    </div>
+    <div class="child3 col-md-3" >
+        <h2>Further Info</h2><br><br>
+        <p>Home</p>
+        <p>About us </p>
+        <p>Shop Locations</p>
+        <p>Contact</p>
+    </div>    
+    <div class="ch col-md-3" style="padding-left: 40px;padding-top: 30px;" ><br><br>
+      <h2>Social Media</h2>
+        <i class="fa-brands fa-facebook"  style="padding-left: 30px;"></i> <i  style="padding-left: 30px;"
+           class="fa-brands fa-square-instagram"></i> <i  style="padding-left: 30px;" class="fa-brands fa-twitter"></i> 
+
+    </div>
+
+  </div>
+
+ 
+  </div>
+  
+ <script src="{% static 'js/index.css' %}"></script>
+ <script>
+  $(document).ready(function() {
+  $("#lightSlider").lightSlider({
+      item: 4,           // Change the number of items shown at once
+      loop: true,        // Enable loop
+      slideMove: 1,      // Slide 1 item at a time
+      auto: true,        // Enable autoplay
+      pauseOnHover: true ,// Pause autoplay on hover
+      pager:false
+  });
+});
+
+    $('.hover-image').hover(
+        function() {
+            // On hover, change to hover image
+            var hoverImg = $(this).attr('data-hover');
+            $(this).attr('src', hoverImg);
+        }, 
+        function() {
+            // On mouse out, change back to default image
+            var defaultImg = $(this).attr('data-default');
+            $(this).attr('src', defaultImg);
+        }
+    );
+  </script>
+
+  {% endblock  %}
+</body>
+</html>
+
+
+
